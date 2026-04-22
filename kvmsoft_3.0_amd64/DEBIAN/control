@@ -1,0 +1,11 @@
+Package: kvmsoft
+Version: 3.0
+Section: utils
+Priority: optional
+Architecture: all
+Depends: python3 (>= 3.6), python3-pip
+Recommends: python3-pyqt5, python3-evdev, python3-xlib
+Maintainer: Votre Nom <votre@email.com>
+Description: Partage de clavier reseau entre deux machines Linux
+ KVMSoft permet de partager un clavier physique entre deux ordinateurs
+ Linux via TCP/IP (LAN ou VPN ZeroTier). Interface PyQt5.

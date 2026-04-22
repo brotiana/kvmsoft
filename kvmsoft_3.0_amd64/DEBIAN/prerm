@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+case "$1" in remove|upgrade|deconfigure) : ;; esac
+exit 0

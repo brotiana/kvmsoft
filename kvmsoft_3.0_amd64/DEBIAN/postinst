@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+case "$1" in
+    configure)
+        for pkg in PyQt5 evdev python-xlib; do
+            pip3 install --quiet --break-system-packages "$pkg" 2>/dev/null \
+            || pip3 install --quiet "$pkg" 2>/dev/null || true
+        done
+        chmod +x /usr/lib/kvmsoft/kvmsoft.py /usr/bin/kvmsoft
+        ;;
+esac
+exit 0
