@@ -45,9 +45,9 @@ except ImportError:
 APP_NAME     = "KVMSoft"
 APP_VERSION  = "1.2"
 DEFAULT_PORT = 55555
-DEFAULT_DEV  = "/dev/input/event3"               # FIX 1
+DEFAULT_DEV  = "/dev/input/event3"             
 EVDEV_OFFSET = 8
-CONFIG_PATH  = os.path.expanduser("~/.config/kvmsoft.json")  # FIX 4
+CONFIG_PATH  = os.path.expanduser("~/.config/kvmsoft.json")   
 
 C_BG      = "#1e1e2e"
 C_SURFACE = "#2a2a3e"
@@ -990,7 +990,7 @@ KEYBOARD_PHOTO_B64 = (
 class FooterWidget(QWidget):
     """Zone de pied de page : photo de clavier avec fondu, bouton Demarrer superpose."""
 
-    btn_clicked = None  # sera remplace par le slot
+    btn_clicked = None  
 
     def __init__(self, parent=None):
         super(FooterWidget, self).__init__(parent)
@@ -998,7 +998,6 @@ class FooterWidget(QWidget):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setAutoFillBackground(False)
 
-        # Charger la photo depuis le base64 integre
         self._kbd_pixmap = None
         if PYQT5_OK:
             try:
@@ -1042,15 +1041,13 @@ class FooterWidget(QWidget):
             oy = (scaled.height() - H) // 2
             p.drawPixmap(0, 0, scaled, ox, oy, W, H)
         else:
-            # Fallback : fond sombre uni
             p.fillRect(0, 0, W, H, QColor("#13132a"))
 
-        # Superposer un degrade transparent->sombre de haut en bas
         grad = QLinearGradient(0, 0, 0, H)
-        grad.setColorAt(0.00, QColor(30, 30, 46, 210))   # quasi opaque en haut
-        grad.setColorAt(0.40, QColor(30, 30, 46, 130))   # mi-transparent
-        grad.setColorAt(0.70, QColor(30, 30, 46,  60))   # presque transparent
-        grad.setColorAt(1.00, QColor(30, 30, 46, 180))   # re-assombri en bas
+        grad.setColorAt(0.00, QColor(30, 30, 46, 210))   
+        grad.setColorAt(0.40, QColor(30, 30, 46, 130))   
+        grad.setColorAt(0.70, QColor(30, 30, 46,  60))    
+        grad.setColorAt(1.00, QColor(30, 30, 46, 180))   
         p.fillRect(0, 0, W, H, grad)
 
         p.end()
@@ -1955,6 +1952,8 @@ RÉSEAU
 COMPATIBILITÉ
 ─────────────
   Python 3.6+  ·  Ubuntu 18.04 / 20.04 / 22.04 / 24.04  ·  Linux
+─────────────
+Developpé par Bro tiana - +261387037747 - https://github.com/brotiana
 """
 
 
@@ -1970,7 +1969,6 @@ def main():
     app.setApplicationName(APP_NAME)
     app.setApplicationVersion(APP_VERSION)
 
-    # Sauvegarder l'icône PNG dans le dossier utilisateur.
 
     icon_path = os.path.expanduser("~/.local/share/icons/kvmsoft.png")
     _save_icon_file(icon_path, 128)

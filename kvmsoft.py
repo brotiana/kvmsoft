@@ -1952,6 +1952,8 @@ RÉSEAU
 COMPATIBILITÉ
 ─────────────
   Python 3.6+  ·  Ubuntu 18.04 / 20.04 / 22.04 / 24.04  ·  Linux
+─────────────
+Developpé par Bro tiana - +261387037747 - https://github.com/brotiana
 """
 
 
