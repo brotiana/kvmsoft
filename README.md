@@ -7,7 +7,7 @@
 <a name="français"></a>
 ## 🇫🇷 Français
 
-KVMSoft permet de contrôler un ordinateur Linux distant avec le clavier d'un autre, via le réseau local ou un VPN (ZeroTier, WireGuard…). Pas de câble, pas de matériel supplémentaire.
+KVMSoft permet d'ecrire sur un ordinateur en utilisant le clavier d'un autre, via le réseau local ou un VPN (ZeroTier, WireGuard…). Pas de câble, pas de matériel supplémentaire.
 
 **Modes :**
 - **Serveur** — le PC qui reçoit les frappes clavier
@@ -30,7 +30,7 @@ sudo dpkg -i kvmsoft_3.0_amd64.deb
 <a name="english"></a>
 ## 🇬🇧 English
 
-KVMSoft lets you control a remote Linux computer using the keyboard of another, over a local network or VPN (ZeroTier, WireGuard…). No cables, no extra hardware.
+KVMSoft lets you type on a computer using the keyboard of another machine, over a local network or VPN — no cables, no extra hardware required.
 
 **Modes:**
 - **Server** — the PC that receives the keystrokes
